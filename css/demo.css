@@ -18,7 +18,7 @@ body {
     margin-top:50px;
     display:flex;
 }
-#main_container > div{
+div.tile{
     flex: 1 1;
     margin:10px;
     box-shadow: 4px 4px 4px;
@@ -26,7 +26,7 @@ body {
     border-radius:4px;
     position:relative;
 }
-#main_container > div h3 {
+div.tile h3 {
     width:100%;
     background-color: rgb(20,20,20);
     padding:10px;
@@ -59,10 +59,30 @@ body {
 #my_harkin ul li:nth-child(even){
     background-color:rgba(240, 24, 24,0.2);
 }
+#my_harkin.minimized {
+   width:30%;
+   position:fixed;
+   bottom:-11px;
+}
+#my_harkin.minimized ul {
+   display:none;
+}
+#my_harkin.minimized h3:after{
+   width: 0; 
+   height: 0; 
+   border-left: 10px solid transparent;  /* left arrow slant */
+   border-right: 10px solid transparent; /* right arrow slant */
+   border-bottom: 10px solid rgb(0,100,220); /* bottom, add background color here */
+   font-size: 0;
+   content:"l";
+   position:absolute;
+   right:10px;
+   cursor:pointer;
+}
 /*
 #main_container > div:before{
-    height:1em;
-    width:100%;
+ height:1em;
+ width:100%;
     content:"x";
     display:block;
     background-color:black;
